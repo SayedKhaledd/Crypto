@@ -2,7 +2,7 @@
   <artifact type="jar" name="xo:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/xo_jar</output-path>
     <root id="archive" name="xo.jar">
-      <element id="module-output" name="xo" />
+      <element id="module-output" name="Crypto" />
       <element id="extracted-dir" path="F:/javafx-sdk-13.0.1/lib/src.zip" path-in-jar="/" />
       <element id="extracted-dir" path="F:/javafx-sdk-13.0.1/lib/javafx-swt.jar" path-in-jar="/" />
       <element id="extracted-dir" path="F:/javafx-sdk-13.0.1/lib/javafx.web.jar" path-in-jar="/" />
