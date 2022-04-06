@@ -9,7 +9,7 @@ import java.util.*;
 
 public class MonoalphabeticCipher {
     public static void main(String[] args) throws IOException {
-        File plainTextFile = new File("Crypto\\src\\New Text Document.txt");
+        File plainTextFile = new File("src\\New Text Document.txt");
         String plainText = ReadAndWrite.readFromFile(plainTextFile);
         String encryptedText = encrypt(plainText);
         File encryptedTextFile = ReadAndWrite.writeToFile("encrypted", encryptedText);
@@ -69,9 +69,9 @@ public class MonoalphabeticCipher {
 
     public static void attack(String text) throws FileNotFoundException {
         StringBuilder s = new StringBuilder("");
-        File plainTextFile = new File("G:\\IdeaProjects\\Crypto_Lab2\\src\\New Text Document.txt");
+        File plainTextFile = new File("src\\New Text Document.txt");
         String plainText = ReadAndWrite.readFromFile(plainTextFile);
-        File encrytedTextFile = new File("G:\\IdeaProjects\\Crypto_Lab2\\src\\encrypted.txt");
+        File encrytedTextFile = new File("src\\encrypted.txt");
         String encryptedText = ReadAndWrite.readFromFile(encrytedTextFile);
         Character[] c = new Character[26];
         for (int i = 0; i < 26; i++) {
