@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab1.Controller">
+   <children>
+      <Label layoutX="213.0" layoutY="-4.0" text="Ceaser Cipher">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="71.0" text="enter key" />
+      <Label layoutX="305.0" layoutY="71.0" text="the key must be an integer value in the range 1 to 25" />
+      <TextField layoutX="151.0" layoutY="67.0" />
+      <Label layoutX="14.0" layoutY="111.0" text="Encryption" />
+      <Label layoutX="51.0" layoutY="141.0" text="Plaintext File" />
+      <Label layoutX="51.0" layoutY="168.0" text="Ciphertext File" />
+      <Label layoutX="51.0" layoutY="205.0" text="Encryption of statement" />
+      <Label layoutX="13.0" layoutY="236.0" text="Decryption" />
+      <TextField fx:id="plaintextField" layoutX="162.0" layoutY="129.0" />
+      <TextField layoutX="162.0" layoutY="164.0" />
+      <TextField layoutX="189.0" layoutY="201.0" prefHeight="25.0" prefWidth="292.0" />
+      <Button layoutX="356.0" layoutY="129.0" mnemonicParsing="false" onAction="#browse" text="browse.." />
+      <Button layoutX="356.0" layoutY="164.0" mnemonicParsing="false" text="browse.." />
+      <Button layoutX="435.0" layoutY="129.0" mnemonicParsing="false" onAction="#open" text="open" />
+      <Button layoutX="435.0" layoutY="164.0" mnemonicParsing="false" text="open" />
+      <Button layoutX="498.0" layoutY="129.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="60.0" prefWidth="76.0" text="Encrypt" />
+      <Button layoutX="498.0" layoutY="201.0" mnemonicParsing="false" text="Encrypt" />
+      <TextField layoutX="170.0" layoutY="253.0" />
+      <TextField layoutX="170.0" layoutY="288.0" />
+      <Label layoutX="70.0" layoutY="292.0" text="Output File" />
+      <Label layoutX="62.0" layoutY="257.0" text="Ciphertext File" />
+      <Button layoutX="366.0" layoutY="248.0" mnemonicParsing="false" text="browse.." />
+      <Button layoutX="366.0" layoutY="283.0" mnemonicParsing="false" text="browse.." />
+      <Button layoutX="445.0" layoutY="248.0" mnemonicParsing="false" text="open" />
+      <Button layoutX="445.0" layoutY="283.0" mnemonicParsing="false" text="open" />
+      <Button layoutX="510.0" layoutY="248.0" mnemonicParsing="false" onAction="#decrypt" prefHeight="60.0" prefWidth="76.0" text="Decrypt" />
+      <Button layoutX="168.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Brute-Force Attack" />
+      <Label layoutX="39.0" layoutY="401.0" text="Decryption of Statement" />
+      <TextField layoutX="174.0" layoutY="397.0" prefHeight="25.0" prefWidth="292.0" />
+      <Button layoutX="483.0" layoutY="397.0" mnemonicParsing="false" text="Decrypt" />
+      <Label layoutX="24.0" layoutY="452.0" text="Text Area" />
+      <TextArea fx:id="textArea" layoutX="24.0" layoutY="482.0" prefHeight="118.0" prefWidth="445.0" />
+      <Button layoutX="485.0" layoutY="491.0" mnemonicParsing="false" onAction="#clear" prefHeight="60.0" prefWidth="102.0" text="Clear Text Area" />
+   </children>
+</AnchorPane>
