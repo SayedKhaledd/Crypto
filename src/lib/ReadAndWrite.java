@@ -1,4 +1,4 @@
-package lab2;
+package lib;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,10 +1,10 @@
 package lab2;
 
+import lib.ReadAndWrite;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.*;
 
 public class MonoalphabeticCipher {

@@ -1,5 +1,7 @@
 package lab2;
 
+import lib.ReadAndWrite;
+
 import java.io.File;
 import java.io.IOException;
 
