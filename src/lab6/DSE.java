@@ -2,11 +2,16 @@ package lab6;
 
 import lib.ReadAndWrite;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.Arrays;
 
 public class DSE {
+    public static void main(String[] args) throws IOException {
+        DSE.keyGeneration("133457799BBCDFF1");
+    }
     static char[] key = new char[64];
     static char[] keyPc1 = new char[56];
     static char[][] keyLShifts = new char[16][28];
@@ -154,6 +159,16 @@ public class DSE {
             }
             s.append("\n");
         }
-        ReadAndWrite.writeToFile("myKeys", s.toString());
+        writeToFile("myKeys", s.toString());
+    }
+
+    public static File writeToFile(String fileName, String text) throws IOException {
+        File encryptedFile = new File("src\\"+fileName+".txt");
+        if (!encryptedFile.createNewFile())
+            System.out.println("couldn't create the file");
+        PrintWriter op = new PrintWriter(encryptedFile);
+        op.print(text);
+        op.close();
+        return encryptedFile;
     }
 }
