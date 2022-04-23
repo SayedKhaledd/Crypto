@@ -12,6 +12,7 @@ public class DSE {
     public static void main(String[] args) throws IOException {
         DSE.keyGeneration("133457799BBCDFF1");
     }
+
     static char[] key = new char[64];
     static char[] keyPc1 = new char[56];
     static char[][] keyLShifts = new char[16][28];
@@ -84,7 +85,7 @@ public class DSE {
     public static void rightKey(char[] keyR, char[] key) {
         if (key.length - key.length / 2 >= 0)
             System.arraycopy(key, key.length / 2, keyR, 0, key.length - key.length / 2);
-        System.out.println("key left is " + Arrays.toString(keyR));
+        System.out.println("key right is " + Arrays.toString(keyR));
 
     }
 
@@ -101,15 +102,22 @@ public class DSE {
 
         for (int i = 1; i < keyLShifts.length; i++) {
             numOfLeftShifts = LEFT_SHIFTS[i];
+            System.arraycopy(keyLShifts[i - 1], 0, keyLShifts[i], 0, keyLShifts[i - 1].length );
+
             for (int j = 0; j < numOfLeftShifts; j++) {
-                char c = keyLShifts[i - 1][0];
-                System.arraycopy(keyLShifts[i - 1], 1, keyLShifts[i], 0, keyLShifts[i - 1].length - 1);
-                keyLShifts[i][key.length - 1] = c;
+                System.out.println(j);
+                char c = keyLShifts[i][0];
+                for (int k = 0; k < keyLShifts[i].length - 1; k++) {
+                    keyLShifts[i][k] = keyLShifts[i][k + 1];
+                }
+                keyLShifts[i][keyLShifts[i].length - 1] = c;
+
 
             }
         }
-        System.out.println("key left/right shifts 0:" + Arrays.toString(keyLShifts[0]));
-        System.out.println("key left/right shifts 1:" + Arrays.toString(keyLShifts[0]));
+        for (int i = 0; i < keyLShifts.length; i++) {
+            System.out.println(keyLShifts[i]);
+        }
 
 
     }
@@ -163,7 +171,7 @@ public class DSE {
     }
 
     public static File writeToFile(String fileName, String text) throws IOException {
-        File encryptedFile = new File("src\\"+fileName+".txt");
+        File encryptedFile = new File("src\\" + fileName + ".txt");
         if (!encryptedFile.createNewFile())
             System.out.println("couldn't create the file");
         PrintWriter op = new PrintWriter(encryptedFile);
